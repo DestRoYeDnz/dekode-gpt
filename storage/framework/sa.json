@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "dekode-gpt",
+    "private_key_id": "d1762c7242235fc11b5ad8f293920c77db17133b",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYuLRH1kAb5c64\neAkHfFEAlKtLrHb4tgI3pxEKpFrEEqJkSN7oWvSmVEq/AKeqDAzXxN5zMaegErne\nfojrGB+5OsRj0fDlbib5WylL4MwIJrczh652M6KLHvrbSFIFmQb4rdJ55Mog75fP\nprTmC85VtKv58u0ddFAqmO7qY/OKYIWqxPzt1ELRN28Fo+7wNIV3RweVh6YlW25T\nZyw3/VwMTqy8nnhEE4ugpmBF0Nz6GePYEYv5g/Ty8SoQFzlJriaEK0sG+z4v/kVr\n9c3lbJoH/bOEWkOfpIuecKjbmZSGqGEQt2kk91HO7M43Bp6ONCXP3hTucVr2VwX5\naaRaVfc1AgMBAAECggEAAIwjK/yHh5Se1YeTMj8h/bQPWvbIg2ME7nFng/2QnRIy\ncsegA9iJylNX10Ju5VTBFNeXtbvTvzdyUIXU11JGs+gCaDGUqGhdEmRxpXQxwR2C\nCLHKZGc1iSoHjpLBEWirh4GJ/u09X2kTDWhDYWQ4dq8lINn4puCL0ikfRHVMWlOi\n9dC+be6zxkSSRbuL050jK+ZiAgrVamQSrSSRDpZ1TIEj++HYXJ+GBFJ+cBlxbB4l\ncQxDrGID48dRUGLbZpcwx5r5D6FK3b6Sn/9aegWWadGS+qmzNcPurXbU0oO0QMQd\nVhj4yjNE/uuCZ8tnAD9T0X3e6e30Db9r/RAjntNXQQKBgQDT84nu5oJ6A8lc44q1\nGAOwp87+960toevkq6xJoBoZEpoDOUMH9q8TJ4zJzsWEAV6nw6U3f0CIrUFdnnBl\nimevoJzrwWOOHQ7lxxBzfRivNuJXzFyx6UQ3WW1E7kyMwXHPJmK4CQ1h8yqI0tgi\n8AuunF0BDjMbINFF1e1tt+TFwQKBgQC4dfT9ma02C9J163GiltjWHLucE0rCnFrv\nrox/a7ki7kQPYwgYvV7AKfv4ke/Yq58nz1RKlIdM5K3sweNUO4+Y8iSYsm0jmhtd\nJKotgtG9PjOKv1lC3gacVuv2s8UzAdYei935Go3UiKQ+Wwd4Oo4XWPVzoZNSa+xX\n2xrHMgkWdQKBgG9mm+LzSTT0dIvcFPWmD5p0OPoOF/naF3BzQvTXr5/qBQUYvcCb\nyd1ZdkhD49DEH4ox7M7ElZjA55BbTFwyaNkIpDHNzZPOdhwTivQIlkbRpBndkgL4\nxiAJYsNONPHuYvEsDcsJBv2qn3qWx39lh95Y1RFO81GY6CW6kTaP5zCBAoGARqwC\nyirXvw42ezFSnz12JEpr4rdNfFRVTuEsOSF3lBd/gfmqP3hGVg9/11NqdjQCzUjU\n/aH8WIyAymXaiAot0SZsuQgbYnmHpF8IyFkHrJ6pNq5rL4BLPhjbXPCxTAKXG6rw\nx6DR2Czl6HIN4ZVlnTJbEAtGm1x3940drFXSP4UCgYEAtdW4d7tN49oUTWu7DVCa\n+lB+8G//5U2f/ydY8TGuJdk+rkkHtcadMOW07OJdcVAk6w2Xc6zBKKE57YcEpnYT\nojafe2QiY2VN0IpB2dhctgMmGUL2MfX1lAfuXMNjVBFtSF+ClsvubACT3hYQZuqu\nXa6IU0jVU87b3HJ9IoIaQoI=\n-----END PRIVATE KEY-----\n",
+    "client_email": "dekode-gpt-web@dekode-gpt.iam.gserviceaccount.com",
+    "client_id": "108656716998564152306",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dekode-gpt-web%40dekode-gpt.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }

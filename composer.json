@@ -1,6 +1,6 @@
 {
     "name": "laravel/laravel",
-    "type": "dekodeGPT",
+    "type": "project",
     "description": "Custom GPT Frontend for GPT4.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",

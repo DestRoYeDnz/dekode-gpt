@@ -52,7 +52,8 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
     <Head :title="title" />
     <ChatLayout>
         <template #aside>
-            <ul class="p-2 bg-black">
+            <div class="text-white text-3xl my-4">DekodeGPT</div>
+            <ul class="p-2 bg-slate-700">
                 <li v-if="chat"
                     class="px-4 py-2 my-2 flex justify-between font-semibold text-green-400 bg-slate-900 hover:bg-slate-700 rounded-lg duration-200">
                     <Link href="/chat" class="w-full">New Chat</Link>
@@ -61,7 +62,7 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                 </li>
-                <template v-for="message in messages" :key="message.id">
+                <template class='bg-slate-700' v-for="message in messages" :key="message.id">
                     <li :class="[
                         message.id === chat?.id
                             ? 'bg-slate-700'
@@ -103,7 +104,7 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
         <div class="w-full flex text-white">
             <template v-if="chat">
                 <div class="w-full flex h-screen bg-slate-900">
-                    <div class="w-full overflow-auto pb-36" ref="chatContainer">
+                    <div class="w-full overflow-auto pb-36 m-8" ref="chatContainer">
                         <template v-for="(content, index) in chat?.context" :key="index">
                             <ChatContent :content="content" />
 
@@ -117,7 +118,7 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
             <section class="px-6 top-0">
                 <div class="w-full">
                     <div class="relative flex-1 flex items-center">
-                        <input type="text" class="w-full bg-slate-700 text-white rounded-lg" placeholder="Ask Laravel AI"
+                        <input type="text" class="w-full bg-slate-700 text-white rounded-lg" placeholder="Ask DekodeGPT"
                             v-model="form.promt" @keyup.enter="submit" :disabled="form.processing" ref="promtInput" />
                         <div class="absolute inset-y-0 right-0 flex items-center pl-3">
                             <svg v-if="!form.processing" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

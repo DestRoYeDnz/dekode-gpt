@@ -7,14 +7,14 @@
             <slot name="aside" />
         </div>
     </aside>
-    <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-        <div class="pt-6 bg-black">
-            <main>
+    <div class="block ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+        <div class="pt-6 bg-slate-800 w-full h-max">
+            <main class="bg-red-500">
                 <slot />
             </main>
         </div>
         <div
-            class="fixed z-20 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] bottom-0 h-28 bg-slate-900 bg-opacity-70 shadow-2xl lg:py-2.5"
+            class="fixed z-20 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] bottom-0 h-28 bg-slate-900 shadow-2xl lg:py-2.5"
         >
             <slot name="form" />
         </div>

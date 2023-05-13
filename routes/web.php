@@ -36,7 +36,6 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/createGoogleDoc', [GoogleDocController::class, 'createGoogleDoc']);
 
 
 require __DIR__ . '/auth.php';

@@ -22,66 +22,45 @@ class GoogleDocController extends Controller
 
         $service = new Docs($client);
 
-        try {
+        $title = $request->input('title');
+        $document = new \Google\Service\Docs\Document(array(
+            'title' => $title
+        ));
 
-            $title = $request->input('title');
-            $document = new \Google\Service\Docs\Document(array(
-                'title' => $title
-            ));
+        $document = $service->documents->create($document);
 
-            $document = $service->documents->create($document);
-        } catch (\Exception $e) {
-            echo 'Message: ' . $e->getMessage();
-        }
-
-        try {
-            $drive = new \Google\Service\Drive($client);
-            $resource = new \Google\Service\Drive\Permission([
-                'type' => 'user',
-                'role' => 'writer',
-                'emailAddress' => 'brettj@dekode.co.nz',
-            ]);
-
-            $result = $drive->permissions->create($document->documentId, $resource, array('fields' => 'id'));
-
-            
-        } catch (\Exception $e) {
-            echo 'Message: ' . $e->getMessage();
-        }
-
-        try {
-            $requests = array();
-            $requests[] = new \Google\Service\Docs\Request(array(
-                'insertText' => array(
-                    'text' => $request->input('content'),
-                    'location' => array(
-                        'index' => 1,
-                    ),
-                )
-            ));
-
-            $batchUpdateRequest = new \Google\Service\Docs\BatchUpdateDocumentRequest(array(
-                'requests' => $requests
-            ));
-
-            $response = $service->documents->batchUpdate($document->documentId, $batchUpdateRequest);
-
-            return redirect()->back()->with('message', 'My message');
-        } catch (\Exception $e) {
-            // TODO(developer) - handle error appropriately
-            echo 'Message: ' . $e->getMessage();
-        }
-
-
-
-
-
-
-        // Return the document ID or any other response as needed
-        return response()->json([
-            'message' => 'Google Doc created successfully',
-            'document_id' => $document,
+        $drive = new \Google\Service\Drive($client);
+        $resource = new \Google\Service\Drive\Permission([
+            'type' => 'user',
+            'role' => 'writer',
+            'emailAddress' => 'brettj@dekode.co.nz',
         ]);
+
+        $drive->permissions->create($document->documentId, $resource, array('fields' => 'id'));
+
+
+        $requests = array();
+        $requests[] = new \Google\Service\Docs\Request(array(
+            'insertText' => array(
+                'text' => $request->input('content'),
+                'location' => array(
+                    'index' => 1,
+                ),
+            )
+        ));
+
+        $batchUpdateRequest = new \Google\Service\Docs\BatchUpdateDocumentRequest(array(
+            'requests' => $requests
+        ));
+
+        $service->documents->batchUpdate($document->documentId, $batchUpdateRequest);
+
+        \Session::put('success', [
+            'color' => 'green',
+            'title' => 'Success',
+            'message' => 'message'
+        ]);
+        return back();
     }
 
     private function convertMarkdownToGoogleDocs($markdownContent)

@@ -24,6 +24,7 @@ function addToGoogleDocs(body) {
 </script>
 
 <template>
+    {{ $page.props }}
     <div class="flex text-white py-6 bg-slate-700">
         <span class="w-1/6 flex justify-end pr-4">
             <div v-if="content.role === 'user'">

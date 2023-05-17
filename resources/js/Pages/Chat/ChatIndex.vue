@@ -107,8 +107,10 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
                     <div class="w-full overflow-auto pb-36 m-8" ref="chatContainer">
                         <template v-for="(content, index) in chat?.context" :key="index">
                             <ChatContent :content="content" />
+                            
 
                         </template>
+
                         <Skeleton v-show="form.processing" />
                     </div>
                 </div>
